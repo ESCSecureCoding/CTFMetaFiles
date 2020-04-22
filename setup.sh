@@ -23,20 +23,20 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 mkdir /var/CTF
 cd /var/CTF/
 
-git clone https://github.com/JavanXD/CTFd.git 	
-git clone --single-branch --branch CTFd-Auto-Submit https://github.com/JavanXD/juice-shop.git
-curl https://gist.githubusercontent.com/fabianhick/c8891853c84bb56d591ec1dfc406256a/raw/f3d04a9e53ea7edc6f207944a7b6e0fae4bb5d9a/exxeta.yml > exxeta.yml
+git clone https://github.com/ESCSecureCoding/CTFd.git	
+git clone --single-branch --branch CTFd-Auto-Submit https://github.com/ESCSecureCoding/juice-shop.git
+curl https://raw.githubusercontent.com/ESCSecureCoding/CTFMetaFiles/master/exxeta.yml > exxeta.yml
 
 # load modified docker-compose config
-curl https://gist.githubusercontent.com/fabianhick/c8891853c84bb56d591ec1dfc406256a/raw/64ac6e0afcf8cce06bd40d407de809f977a273f2/docker-compose.yml > CTFd/docker-compose.yml
-curl https://gist.githubusercontent.com/fabianhick/c8891853c84bb56d591ec1dfc406256a/raw/1d870d6fd5ebb40731926875a75ad464472d23ec/Dockerfile > CTFd/Dockerfile
-curl https://gist.githubusercontent.com/fabianhick/c8891853c84bb56d591ec1dfc406256a/raw/7c8054719a639d2058e828e317450126e86b01da/base.html > CTFd/CTFd/themes/core/templates/base.html
-curl https://gist.githubusercontent.com/fabianhick/c8891853c84bb56d591ec1dfc406256a/raw/64ac6e0afcf8cce06bd40d407de809f977a273f2/init__init__.py > CTFd/CTFd/utils/initialization/__init__.py
-curl https://gist.githubusercontent.com/fabianhick/c8891853c84bb56d591ec1dfc406256a/raw/bdc114fda468044a99de51f78fdbff3f69232c6e/login.html > CTFd/CTFd/themes/core/templates/login.html
-curl https://gist.githubusercontent.com/fabianhick/c8891853c84bb56d591ec1dfc406256a/raw/bdc114fda468044a99de51f78fdbff3f69232c6e/register.html > CTFd/CTFd/themes/core/templates/register.html
+curl https://raw.githubusercontent.com/ESCSecureCoding/CTFMetaFiles/master/docker-compose.yml > CTFd/docker-compose.yml
+curl https://raw.githubusercontent.com/ESCSecureCoding/CTFMetaFiles/master/Dockerfile > CTFd/Dockerfile
+curl https://raw.githubusercontent.com/ESCSecureCoding/CTFMetaFiles/master/base.html > CTFd/CTFd/themes/core/templates/base.html
+curl https://raw.githubusercontent.com/ESCSecureCoding/CTFMetaFiles/master/init__init__.py > CTFd/CTFd/utils/initialization/__init__.py
+curl https://raw.githubusercontent.com/ESCSecureCoding/CTFMetaFiles/master/login.html > CTFd/CTFd/themes/core/templates/login.html
+curl https://raw.githubusercontent.com/ESCSecureCoding/CTFMetaFiles/master/register.html > CTFd/CTFd/themes/core/templates/register.html
 
 mkdir CTFd/CTFd/plugins/autodeploy
-curl https://gist.githubusercontent.com/fabianhick/c8891853c84bb56d591ec1dfc406256a/raw/bdc114fda468044a99de51f78fdbff3f69232c6e/__init__.py > CTFd/CTFd/plugins/autodeploy/__init__.py
+curl https://raw.githubusercontent.com/ESCSecureCoding/CTFMetaFiles/master/__init__.py > CTFd/CTFd/plugins/autodeploy/__init__.py
 
 cd juice-shop
 docker build . --tag juice_shop

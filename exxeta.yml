@@ -1,0 +1,10 @@
+application:
+  logo: JuiceShopCTF_Logo.png
+  name: EXXETA Shop
+  favicon: favicon_ctf.ico
+  showChallengeHints: false
+  showVersionNumber: false
+  gitHubRibbon: false
+ctf:
+  showFlagsInNotifications: true
+  ctfdHost: https://dashboard.labs.secure-coding-schulung.de
